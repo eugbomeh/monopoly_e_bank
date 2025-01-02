@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monopoly Bank</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="setup">
+            <h1>Monopoly Bank Setup</h1>
+            <form id="setup-form">
+
+                <div class="starting-amount-fields">
+                    <label for="starting-amount">Starting Amount (Default: 1500):</label>
+                    <br>
+                    <input type="number" id="starting-amount" value="1500" required>
+                </div>
+
+
+                <div class="players-fields">
+                    <label for="player-count">Number of Players (Default: 2):</label>
+                    <br>
+                    <input type="number" value="2" id="player-count" min="2" max="6" required>
+                </div>
+
+                <p id="enter-players" class="hidden">Enter each player's <strong>Name</strong> below..</p>
+
+                <div id="player-names"></div>
+
+                <button type="button" id="add-players">Add Players Names</button>
+                <button type="button" id="reset-form">Reset Players</button>
+            </form>
+        </div>
+
+        <div id="game" class="hidden">
+            <h1>Monopoly Bank</h1>
+            <div id="player-list"></div>
+
+            <div id="transactions">
+                <h2>Transaction History</h2>
+                <ul id="transaction-log"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
